@@ -1,4 +1,5 @@
 import unittest
+from fizzbuzz import FizzBuzz 
 
 class FizzBuzzTest(unittest.TestCase):
 
@@ -16,8 +17,14 @@ class FizzBuzzTest(unittest.TestCase):
         result = self.fizzbuzz.filter(2)
         self.assertEqual('2', result)
 
+    def test_three_should_return_fizz(self):
+        result = self.fizzbuzz.filter(3)
+        assert result == 'Fizz'
 
-class FizzBuzz:
-	
-    def filter(self, number):
-        return str(number)
+    def test_five_should_return_buzz(self):
+        result = self.fizzbuzz.filter(5)
+        assert result == 'Buzz'
+
+    def test_fifteen_should_return_fizzbuzz(self):
+        result = self.fizzbuzz.filter(15)
+        assert result == 'FizzBuzz'

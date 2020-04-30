@@ -1,4 +1,5 @@
 import pytest
+from fizzbuzz import FizzBuzz 
 
 @pytest.fixture
 def fizzBuzz():
@@ -12,12 +13,15 @@ def test_two_should_return_two(fizzBuzz):
     result = fizzBuzz.filter(2)
     assert result == '2'
 
-@pytest.mark.skip(reason="WIP")
 def test_three_should_return_fizz(fizzBuzz):
     result = fizzBuzz.filter(3)
     assert result == 'Fizz'
 
-class FizzBuzz:
-	
-    def filter(self, number):
-        return str(number)
+def test_five_should_return_buzz(fizzBuzz):
+    result = fizzBuzz.filter(5)
+    assert result == 'Buzz'
+
+def test_fifteen_should_return_fizzbuzz(fizzBuzz):
+    result = fizzBuzz.filter(15)
+    assert result == 'FizzBuzz'
+
