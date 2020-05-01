@@ -8,4 +8,4 @@ def test_alarm_reads_temperature_from_sensor():
     alarm = Alarm(mock_sensor)
     alarm.validate()
     mock_sensor.take_measurement.assert_called()
-    # assert alarm.active == True
+    assert alarm.active == True

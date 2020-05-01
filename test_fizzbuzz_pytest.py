@@ -24,4 +24,3 @@ def test_five_should_return_buzz(fizzBuzz):
 def test_fifteen_should_return_fizzbuzz(fizzBuzz):
     result = fizzBuzz.filter(15)
     assert result == 'FizzBuzz'
-
